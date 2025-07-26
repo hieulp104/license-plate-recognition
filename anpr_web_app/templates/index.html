@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hệ thống Nhận dạng Biển số Xe</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="bg-animation">
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+        <div class="particle"></div>
+    </div>
+
+    <div class="container">
+        <div class="header">
+            <h1><span class="emoji">🚗</span> Nhận dạng Biển số Xe</h1>
+            <p>Tích hợp YOLOv8 và EasyOCR để nhận dạng biển số tự động</p>
+        </div>
+
+        <div class="main-content">
+            <!-- Upload Screen -->
+            <div class="upload-screen" id="uploadScreen">
+                <div class="upload-zone" id="uploadZone">
+                    <div class="upload-icon">📷</div>
+                    <div class="upload-text">Kéo & Thả hoặc Nhấn để chọn ảnh</div>
+                    <div class="upload-subtext">Hỗ trợ JPG, PNG • Tối đa 16MB</div>
+                    <input type="file" id="fileInput" class="file-input" accept="image/jpeg, image/png, image/jpg">
+                </div>
+                <div class="file-name" id="fileName">Chưa chọn file nào</div>
+                
+                <div class="action-buttons">
+                    <button class="btn btn-primary" id="processBtn" disabled>
+                        <span id="btnText">🚀 Bắt đầu nhận dạng</span>
+                        <div class="spinner" id="spinner" style="display: none;"></div>
+                    </button>
+                    <button class="btn btn-secondary" id="resetBtn">🔄 Chọn lại</button>
+                </div>
+                
+                <div class="error-message" id="errorMessage" style="display: none;"></div>
+            </div>
+
+            <!-- Results Screen -->
+            <div class="results-screen" id="resultsScreen">
+                <button class="back-button" id="backBtn">←</button>
+                
+                <div class="results-left">
+                    <div class="section-title">
+                        🖼️ Ảnh gốc với kết quả nhận dạng
+                    </div>
+                    <img id="resultImage" class="result-image" alt="Kết quả nhận dạng">
+                </div>
+                
+                <div class="results-right">
+                    <div class="plate-result">
+                        <div class="section-title">
+                            🎯 Biển số nhận dạng
+                        </div>
+                        <div id="plateResultsContainer">
+                            <!-- Kết quả biển số sẽ được chèn vào đây bởi JS -->
+                        </div>
+                    </div>
+                    
+                    <div class="results-actions">
+                        <button class="btn btn-success" id="saveBtn" style="display: none;">💾 Lưu kết quả</button>
+                        <div class="status-message" id="statusMessage" style="display: none;"></div>
+                    </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+flask
+ultralytics
+easyocr
+opencv-python-headless
+numpy
+werkzeug
+torch
+torchvision

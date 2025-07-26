@@ -1,0 +1,6 @@
+path: D:/Uni/XLA/XuLyAnh/dataset_split
+train: train/images
+val: val/images
+nc: 1
+names:
+- bien_so_xe

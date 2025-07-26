@@ -1,0 +1,6 @@
+=== Model Evaluation Results ===
+mAP@0.5: 0.9950
+mAP@0.5:0.95: 0.7835
+Precision: 0.9997
+Recall: 1.0000
+F1-Score: 0.9998
